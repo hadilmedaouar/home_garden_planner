@@ -1,0 +1,95 @@
+/* Add a media query for smaller screens */
+@media screen and (max-width: 600px) {
+    /* Adjust chat container width */
+    #chat {
+        width: 90%;
+    }
+    
+    /* Adjust chat messages area height */
+    #messages {
+        height: 150px;
+    }
+    
+    /* Adjust chat message styling */
+    .message {
+        padding: 5px;
+        margin: 3px 0;
+    }
+    
+    /* Adjust chat input field */
+    #message {
+        padding: 5px;
+        margin-top: 5px;
+    }
+    
+    /* Adjust send button padding */
+    #send {
+        padding: 5px 10px;
+    }
+}
+.CHA{
+    background-color: rgb(58, 66, 47);
+}
+.spacer{
+    padding:60px ;
+}
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Chat container */
+#chat {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Chat messages area */
+#messages {
+    height: 250px;
+    overflow-y: scroll;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Chat message styling */
+.message {
+    background-color: #0099cc;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+/* Chat input field */
+#message {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Send button */
+#send {
+    display: block;
+    margin-top: 10px;
+    background-color: rgb(78, 88, 64);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Send button on hover */
+#send:hover {
+    background-color: rgb(58, 66, 47);
+}
