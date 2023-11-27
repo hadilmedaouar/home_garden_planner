@@ -12,25 +12,50 @@
     </head>
     <body> 
 
-
-        <nav>
-            <ul>
-                <li><a href = "Home.html">Home</a></li>
-                <li><a href="AboutUs.html">About Us</a></li>
-                <li><a href="Chat_Room.html">Chat Space</a></li>
-                <li><a href = "contactus.html">Contact Us</a></li>
-                <li><a href = "Login.html">Log in</a></li>
-            </ul>
-        </nav>
-
-
+     <!--
+      <nav>
+        <ul>
+            <li><a href = "Home.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Chat_Room.html">Chat Space</a></li>
+            <li><a href = "contactus.html">Contact Us</a></li>
+            <li><a href = "Login.html">Log in</a></li>
+        </ul>
+    </nav>
+  -->
+  <header>
+    <input type ="checkbox" name ="" id ="chk1">
+    <div class="logo"><h1>Home Garden Planner</h1></div>
+        <div class="search-box">
+            <form>
+                <input type ="text" name ="search" id ="srch" placeholder="Search">
+                <button type ="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            
+            <li><a href="Chat_Room.html">Chat Space</a></li>
+            <li><a href = "contactus.html">Contact Us</a></li>
+            <li><a href = "Login.html">Log in</a></li>
+            <li><a href="#"><i class = "fa-brands fa-facebook"></i></a></li>
+            <li> <a href="#"><i class = "fa-brands fa-instagram"></i></a></li>
+            <li> <a href="#"><i class = "fa-brands fa-twitter"></i></a></li>
+        </ul>
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+  </header>
             <section class="image-container">
             <div class="textimg">
-                <h1>Home Garden Planner</h1>
-                <p>Be the artist of your own small paredise!</p>
+                <h1><b>Home Garden Planner</b></h1>
+                <p><b>Be the artist of your own small paredise!</b></p>
             </div>
             </section>
-          
+           
           <section class = "abtus">
             <div class = "heading">
               <h1>Who Are We?</h1>
@@ -42,14 +67,17 @@
                   Plan, plant,and nurture your dream garden effortlessly with our interactive tools.
                   Discover sustainable practices, protect plant species, and transform your outdoor space. 
                   Join us in cultivating beauty and preserving nature,together.</p>
+                  <a href="AboutUs.html">
                     <button class="cta-button">Learn More!</button>
+                </a>
+                
                 </div>
                 <div class = "abt_image">
-                  <img src="a-t-nkOLtHRZpGQ-unsplash.jpg" alt="Our History Image">
+                  <img src="crystal-jo-PKcTuA_CRAo-unsplash.jpg" alt="Our History Image">
                 </div>
               </div>
               
-          
+
           </section>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -59,30 +87,34 @@
             <div class="scrollcontainer">
               <div class="scrollcolumn">
                   
-                      <img src="Araceae-Monstera-deliciosa-var.-borsigiana-albo-variegata-31g2-Steve_E2_80_99s-Leaves-Inc.-e1603305459460.jpg" alt="Image 1">
+                      <img src="Araceae-Monstera-deliciosa-var.-borsigiana-albo-variegata-31g2-Steve_E2_80_99s-Leaves-Inc.-e1603305459460.jpg" alt="Image 1" id="monstera-img">
                   <h2>Monstera</h2>
                   <p>The Monstera, with its elegant Swiss cheese-like leaves, is the perfect tropical touch for your home. It thrives in warm, humid climates and is ideal for indoor decor. This resilient beauty adds a hint of the jungle to any space and grows best during the spring and summer.</p>
+                  
               </div>
       
               <div class="scrollcolumn">
                  
-                      <img src="photo-1594676979216-380a0257305dd(1).png" alt="Image 2">
+                      <img src="photo-1594676979216-380a0257305dd(1).png" alt="Image 2" id="hydrangeas-img">
                   <h2>Hydrangeas</h2>
                   <p>Hydrangeas, known for their dreamy, globe-like blossoms, flourish in mild, temperate climates. They bloom during the spring and summer, making them a captivating addition to gardens in these seasons. The luscious colors of hydrangeas can transform your outdoor space into a floral wonderland.</p>
+                  
               </div>
       
               <div class="scrollcolumn">
                   
-                      <img src="gettyimages-84228164-bougainvillea-1675089174.jpg" alt="Image 3">
+                      <img src="gettyimages-84228164-bougainvillea-1675089174.jpg" alt="Image 3" id="bougainvillea-img">
                   <h2>Bougainvillea</h2>
                   <p>Bougainvilleas are the vibrant stars of warm, Mediterranean climates. Their intense reds, purples, and pinks brighten up gardens during the hot summer months. These eye-catching climbers love the sun and thrive in regions with extended sunshine.</p>
-              </div>
+                  
+                </div>
       
               <div class="scrollcolumn">
                   
-                      <img src="photo-1520302630591-fd1c66edc19d.png" alt="Image 4">
+                      <img src="photo-1520302630591-fd1c66edc19d.png" alt="Image 4" id="succulents-img">
                   <h2>Succulents</h2>
                   <p>Succulents are hardy desert plants that adore sunny, dry climates but also adaptable and can thrive in a wide range of climates . Their low water requirements and ability to withstand harsh conditions make them perfect for arid regions. Whether it's the scorching summer or the cool winter, succulents are evergreen companions.</p>
+                  
               </div>
           </div>
           </section>
@@ -99,11 +131,11 @@
               </div>
               <div class="footerNav">
                 <ul>
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About Us</a></li>
-                  <li><a href="">Chat Space</a></li>
-                  <li><a href="">Contact Us</a></li> 
-                  <li><a href="">Sign In</a></li>
+                  <li><a href="Home.html">Home</a></li>
+                  <li><a href="AboutUs.html">About Us</a></li>
+                  <li><a href="Chat_Room.html">Chat Space</a></li>
+                  <li><a href="contactus.html">Contact Us</a></li> 
+                  <li><a href="Login.html">Sign In</a></li>
                 </ul>
               </div>
             </div>
@@ -111,6 +143,24 @@
               <p>&copy;2023 Home Garden Planner | All Rights Reserved</p>
             </div>
           </footer> 
+          <script>// Add event listeners to each image
+            document.getElementById('monstera-img').addEventListener('click', function() {
+              alert('Explore the elegance of Swiss cheese-like leaves with the Monstera plant.');
+            });
+            
+            document.getElementById('hydrangeas-img').addEventListener('click', function() {
+              alert('Delight in dreamy blossoms with the captivating Hydrangeas.');
+            });
+            
+            document.getElementById('bougainvillea-img').addEventListener('click', function() {
+              alert('Experience vibrant colors and warmth with the Bougainvillea plant.');
+            });
+            
+            document.getElementById('succulents-img').addEventListener('click', function() {
+              alert('Embark on a journey to the desert with these hardy companions that thrive in various climates.');
+            });
+            </script>
       </body>
 </html>
+  
   
