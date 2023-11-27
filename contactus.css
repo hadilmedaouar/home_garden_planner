@@ -1,95 +1,128 @@
-/* Style the spacer */
-.cntus{
-    background-color:  rgb(58, 66, 47);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
 }
-.spacer {
-    height: 70px; /* Adjust the height as needed */
-}
-.info-container {
-    position: relative;
-    height: 100%;
+
+.container-cnt{
+    min-height: 100vh;
+    background: rgb(170, 157, 157); 
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('benjamin-combs-wuU_SSxDeS0-unsplash.jpg') no-repeat center center/cover;
 }
 
-.info-container img {
-    width: 20px; /* Adjust the size of the icons as needed */
-    height: 20px;
-    margin-right: 5px; /* Add some spacing between the icon and text */ 
-}
-.image-containerr {
-    
-    width: 100%; /* Set the width to 100% */
-    height:100% ;
-    position: relative;
-}
-.responsive {
-    max-width: 100%;
-    height: auto;
-  }
-
-.image-containerr img {
-    height: 530px;
-    width: 600px;
-    object-fit: cover; /* Maintain the image aspect ratio and cover the container */
-}
-
-.info-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.info-content img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-.info-content h3 {
-    margin: 10px ;
-    background: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background to make the text more readable */
-    padding: 5px; 
- 
-}
-.contact-container {
+.container-cnt form{
+    width: 670px;
+    height: 400px;
     display: flex;
-    height: 100%; 
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
 }
 
-.second-container {
-    width: 50%;
-    height: 50%;
-    background-color: #f1f1f1; /* Background color for the form */
-    padding: 20px;
-}
-
-.contact-container h2 {
+.container-cnt form h1{
+    color:#fff;
+    font-weight: 500;
+    margin-top:20px;
+    width: 500px;
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin: 10px 0;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-}
-
-button[type="submit"] {
-    background-color:rgb(58, 66, 47); /* Button background color */
-    color: white;
-    padding: 10px;
+.container-cnt form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
     border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.container-cnt form input::placeholder{
+    color: #ddd;
+}
+
+.container-cnt form #lastName,
+.container-cnt form #mobile{
+    margin-left: 20px;
+}
+
+.container-cnt form h4{
+    color: #fff;
+    font-weight: 300;
+    font-size: large;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container-cnt form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194,0.713);
+}
+/*
+.container-cnt form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333;
+    width:100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container-cnt form #button::hover{
+    opacity: 0.7;
+}
+*/
+.container-cnt form #button {
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 5px; /* Adjusted padding for better appearance */
+    margin-left: 500px;
+    margin-bottom: 30px;
+    transition: background 0.3s, color 0.3s; /* Added transition for smoother hover effect */
+}
+
+.container-cnt form #button:hover {
+    background: #3f3b3b;
+    color: #fff;
     cursor: pointer;
 }
