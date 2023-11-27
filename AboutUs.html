@@ -12,69 +12,122 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     </head>
-    <body class = "weAre">
-        
-        <nav>
-            <ul>
-                <li><a href = "Home.html">Home</a></li>
-                <li><a href="AboutUs.html">About Us</a></li>
-                <li><a href="Chat_Room.html">Chat Space</a></li>
-                <li><a href = "contactus.html">Contact Us</a></li>
-                <li><a href = "Login.html">Log in</a></li>
-            </ul>
-        </nav>
+    <body class = "abt" >
+        <header>
+            <input type ="checkbox" name ="" id ="chk1">
+            <div class="logo"><h1>Home Garden Planner</h1></div>
+                <div class="search-box">
+                    <form>
+                        <input type ="text" name ="search" id ="srch" placeholder="Search">
+                        <button type ="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Chat_Room.html">Chat Space</a></li>
+                    <li><a href = "contactus.html">Contact Us</a></li>
+                    <li><a href = "Login.html">Log in</a></li>
+                    <li><a href="#"><i class = "fa-brands fa-facebook"></i></a></li>
+                    <li> <a href="#"><i class = "fa-brands fa-instagram"></i></a></li>
+                    <li> <a href="#"><i class = "fa-brands fa-twitter"></i></a></li>
+                </ul>
+                <div class="menu">
+                    <label for="chk1">
+                        <i class="fa fa-bars"></i>
+                    </label>
+                </div>
+          </header>
+            
         <div class="spacer"></div> <!-- Spacer for separation -->
-    
-        <div class ="content-image-text">
-           <div class="content-image">
-               <img src="wwhhyus.webp" alt="why us Image">
-           </div>    
-    
-           <div class="content-text">
-               <h2>Our Gardening Journey: Cultivating Sustainability and Community</h2>
-               <p>At Home Garden Planner, we're more than just a gardening resource;
-                we're your partners in creating a beautiful and sustainable garden, 
-                contributing to a greener, healthier world. Founded with a deep love 
-                for gardening and a commitment to sustainability, The Home Garden 
-                Planner has been a trusted resource for garden enthusiasts since 
-                September 2023. Our journey began with the vision of creating a 
-                platform that not only assists gardeners in designing beautiful 
-                landscapes but also promotes eco-friendly practices. Over time, 
-                we've flourished into a vibrant community of like-minded individuals 
-                who share a deep passion for nurturing nature. Our dedication extends
-                 to providing innovative garden planning tools and a comprehensive plant
-                  database. Join us on this incredible journey, and together, let's 
-                  shape a more sustainable and greener future for our planet.</p>
-           </div>
-        
-       </div>  
-       
-   
-   
+        <section class="main-Image">
+          <div class="image-text">
+              <h1>Home Garden Planner</h1>
+              <hr>
+              <p>we're your partners in creating a beautiful and sustainable garden, 
+                contributing to a greener, healthier world.</p>
+          </div>
+        </section>
+        <section class="three-columns">
+          <div class="collumn">
+              <div class="VMV">
+                  <img src="photo_2023-11-27_10-15-46.jpg" alt="vision">
+              </div>
+              <h2>our vision</h2>
+              <p>Founded with a deep love for gardening, The Home Garden Planner envisions
+                  a future where every garden is a positive force for the environment.</p>
+          </div>
+          <div class="collumn">
+              <div class="VMV">
+                  <img src="photo_2023-11-27_10-15-35.jpg">
+              </div>
+              <h2>our values </h2>
+              <p>Our commitment extends to providing innovative garden planning tools and a
+                  comprehensive plant database, shaping a more sustainable and greener future
+                  for our planet</p>
+          </div>
+          <div class="collumn">
+              <div class="VMV">
+                  <img src="photo_2023-11-27_10-15-52.jpg" alt="mission">
+              </div>
+              <h2>our mission</h2>
+              <p>Since September 2023, we've been a trusted resource, fostering a vibrant 
+                  community dedicated to promoting eco-friendly practices</p>
+          </div>
+      </section>
+  
+ 
+          <div class="spaceer"></div>
        <div class="title-container">
            <h1>team members </h1>
        </div>
        
-       <div class="team-container">
+       <div class="team-container" id="teamContainer">
            <div class="column">
                <h2>Team Member 1</h2>
+               <img src="member1.jpg" alt="team member 1">
                <p>BENHAMOUCHE Lydia</p>
            </div>
            <div class="column">
                <h2>Team Member 2</h2>
+               <img src="member2.jpg" alt="team member 2">
                <p>MEDAOUAR Hadil</p>
            </div>
            <div class="column">
                <h2>Team Member 3</h2>
+               <img src="member3.jpg" alt="team member 3">
                <p>GUENNOUN Romaissa</p>
            </div>
            <div class="column">
             <h2>Team Member 4</h2>
+            <img src="member4.jpg" alt="team member 4">
             <p>sarra larabi</p>
         </div>
        </div>
-       
-   </div>
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var teamContainer = document.getElementById("teamContainer");
+            var columns = teamContainer.getElementsByClassName("column");
+            var currentIndex = 0;
+    
+            function showNextColumn() {
+                columns[currentIndex].style.display = "none";
+                currentIndex = (currentIndex + 1) % columns.length;
+                columns[currentIndex].style.display = "block";
+            }
+    
+            // Initially hide all columns except the first one
+            for (var i = 1; i < columns.length; i++) {
+                columns[i].style.display = "none";
+            }
+    
+            // Set an interval to change the column every 2 seconds
+            setInterval(showNextColumn, 2000);
+        });
+    </script>
+    
+  
+   <div class="spacerr"></div>
    <!--This is the footer-->
    <footer>
     <div class="footerContainer">
@@ -90,7 +143,7 @@
           <li><a href="">Home</a></li>
           <li><a href="">About Us</a></li>
           <li><a href="">Chat Space</a></li>
-          <li><a href="">Contact Us</a></li> 
+          <li><a href="">Contact Us</a></li>
           <li><a href="">Sign In</a></li>
         </ul>
       </div>
