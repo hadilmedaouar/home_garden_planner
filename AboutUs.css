@@ -1,67 +1,27 @@
-.weAre{
-    background-color: rgb(58, 66, 47);
+.abt{
+    background-color: rgb(142, 116, 80);
 }
 /* Style the spacer */
 .spacer {
     height: 80px; /* Adjust the height as needed */
 }
-
-
-/* Remove flex properties from .content-image-text */
-.content-image-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(190, 196, 182);
-    
+.spacerr {
+    height: 130px; /* Adjust the height as needed */
 }
-
-/* Style the why us image */
-.content-image {
-   
-    text-align:right;
-    max-width: 50%; /* Limit the image to 50% of the container width */
-    
-}
-
-/* Style the why us text */
-.content-text {
-    font-size:larger;
-    text-align: left;
-    max-width: 50%; /* Limit the text to 50% of the container width */
+.spaceer {
+    height: 25px; /* Adjust the height as needed */
 }
 /* Style the team container */
+
 .team-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
-    margin-top: 20px; /* Adjust margin as needed */
-    height : 50vh;
-}
-
-/* Style the team columns */
-.column {
-    flex: 0 0 calc(33.33% - 10px); /* Adjust width and margins as needed */
-    height: auto;
-    padding: 10px;
-    background-color:  rgb(190, 196, 182);
-    text-align: center;
-    margin-bottom: 10px; /* Adjust margin as needed */
-}
-
-/* Media query to control column width on smaller screens */
-@media (max-width: 768px) {
-    .column {
-        flex: 0 0 calc(50% - 10px); /* 2 columns in a row on smaller screens */
-    }
-}
-
-/* Style the content container */
-.content {
-    display: flex;
+    justify-content: center; /* Center the columns horizontally */
+    align-items: center; /* Center the columns vertically */
     flex-wrap: wrap;
+    margin-top: 20px;
+    height: 50vh;
 }
+
 
 .title-container {
     display: flex;
@@ -74,4 +34,77 @@
 .title-container h1 {
     font-size: 24px;
     text-align: center;
+}
+.main-Image{
+    background-image: url("sandie-clarke-q13Zq1Jufks-unsplash.jpg");
+    background-size: cover;
+    padding-top: 4%;
+    width : 100%;
+    height : 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-Image img{
+    width : 100%;
+    height : 100%;
+ 
+}
+
+.image-text{
+  
+    font-weight: 300;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+.three-columns {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between; /* Add space between columns */
+}
+
+.collumn {
+    background-color: rgb(142, 116, 80);
+    width: 20%; /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid rgb(142, 116, 80);
+    box-sizing: border-box;
+    margin-right: 10px; /* Add space to the right of each column */
+}
+
+.VMV img {
+    width: 100%;
+    height: 21vh;
+}
+
+h2, p {
+    margin: 10px;
+}
+  
+
+/* Style the team members' columns */
+.team-container .column {
+    width: calc(25% - 10px); /* Adjust width as needed with space between columns */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgb(249, 248, 239);
+    justify-content: space-between;
+}
+
+/* Style the images inside the columns */
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the text inside the columns */
+.column h2, .column p {
+    text-align: center;
+    color: rgb(16, 20, 18);
 }
