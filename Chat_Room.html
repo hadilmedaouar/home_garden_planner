@@ -1,32 +1,166 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Garden Planner</title>
-        <link href = "stylesheet.css" rel="stylesheet"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <link href = "Chat_room.css" rel="stylesheet"/>
-    </head>
-    <body class = "CHA">
-        
-        <nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Chat_room.css" rel="stylesheet">
+    <link href = "stylesheet.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home Garden Planner</title>
+    
+   </head>
+<body>
+    <header>
+        <input type ="checkbox" name ="" id ="chk1">
+        <div class="logo"><h1>Home Garden Planner</h1></div>
+            <div class="search-box">
+                <form>
+                    <input type ="text" name ="search" id ="srch" placeholder="Search">
+                    <button type ="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
             <ul>
-                <li><a href = "Home.html">Home</a></li>
+                <li><a href="Home.html">Home</a></li>
                 <li><a href="AboutUs.html">About Us</a></li>
                 <li><a href="Chat_Room.html">Chat Space</a></li>
                 <li><a href = "contactus.html">Contact Us</a></li>
                 <li><a href = "Login.html">Log in</a></li>
+                <li><a href="#"><i class = "fa-brands fa-facebook"></i></a></li>
+                <li> <a href="#"><i class = "fa-brands fa-instagram"></i></a></li>
+                <li> <a href="#"><i class = "fa-brands fa-twitter"></i></a></li>
             </ul>
-        </nav>
-        <div class="spacer"></div>
-        <div id="chat">
-            <div id="messages"></div>
-            <input type="text" id="message" placeholder="Type your message">
-            <button id="send">Send</button>
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+      </header>
+  
+    <section class="msger">
+         <main class="msger-chat">
+          <div class="msg left-msg">
+            <div
+             class="msg-img"
+             style="background-image: url(https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg)" ></div>
+            <div class="msg-bubble">
+                <div class="msg-info">
+                  <div class="msg-info-name">BOT</div>
+                  <div class="msg-info-time">12:45</div>
+                </div>
+        
+                <div class="msg-text">
+                  Hi, welcome to the home garden planner 😄
+                </div>
+              </div>
+            </div>
+        
+            <div class="msg right-msg">
+              <div
+               class="msg-img"
+               style="background-image:url(https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg)"
+              ></div>
+             <div class="msg-bubble">
+                <div class="msg-info">
+                  <div class="msg-info-name">me</div>
+                  <div class="msg-info-time">12:46</div>
+                </div>
+        
+                <div class="msg-text">
+                 hi i really loved your website :)
+                </div>
+              </div>
+            </div>
+          </main>
+        
+          <form class="msger-inputarea">
+            <input type="text" class="msger-input" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">Send</button>
+          </form>
+        </section>
+        
+  
+<script>
+const msgerForm = get(".msger-inputarea");
+const msgerInput = get(".msger-input");
+const msgerChat = get(".msger-chat");
+
+const BOT_MSGS = [
+  "Hi, how are you?",
+  "Ohh... I can't understand what you trying to say. Sorry!",
+  "I like to play games... But I don't know how to play!",
+  "Sorry if my answers are not relevant. :))",
+  "I feel sleepy! :("
+];
+
+// Icons made by Freepik from www.flaticon.com
+const BOT_IMG ="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg";
+const PERSON_IMG ="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg";
+const BOT_NAME = "BOT";
+const PERSON_NAME = "me";
+
+msgerForm.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const msgText = msgerInput.value;
+  if (!msgText) return;
+
+  appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+  msgerInput.value = "";
+
+  botResponse();
+});
+
+function appendMessage(name, img, side, text) {
+  //   Simple solution for small apps
+  const msgHTML = `
+    <div class="msg ${side}-msg">
+      <div class="msg-img" style="background-image: url(${img})"></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name">${name}</div>
+          <div class="msg-info-time">${formatDate(new Date())}</div>
         </div>
-     </body>
+
+        <div class="msg-text">${text}</div>
+      </div>
+    </div>
+  `;
+
+  msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+  msgerChat.scrollTop += 500;
+}
+
+function botResponse() {
+  const r = random(0, BOT_MSGS.length - 1);
+  const msgText = BOT_MSGS[r];
+  const delay = msgText.split(" ").length * 100;
+
+  setTimeout(() => {
+    appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+  }, delay);
+}
+
+// Utils
+function get(selector, root = document) {
+  return root.querySelector(selector);
+}
+
+function formatDate(date) {
+  const h = "0" + date.getHours();
+  const m = "0" + date.getMinutes();
+
+  return '${h.slice(-2)}:${m.slice(-2)}';
+}
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+</script>
+</body>
 </html>
-       
